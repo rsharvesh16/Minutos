@@ -1,0 +1,67 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Home | {% endblock %}
+
+{% block content %}
+<section class="hero is-medium is-light is-bold">
+    <div class="hero-body p-5">
+        <div class="container">
+            <img src = "{% static 'images/logo.png' %}" height="200px" width="200px"><br>
+            <h1 class="title">Welcome to Minutos</h1>
+            <h2 class="subtitle">Never miss a deadline again.</h2>
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="columns">
+        <div class="column is-8 is-offset-2">
+            <div class="columns is-align-items mt-6">
+                <div class="column is-4 image">
+                    <img src="{% static 'images/3.png' %}">
+                </div>
+
+                <div class="column is-8 text">
+                    <h2 class="subtitle"><b>Time tracking</b></h2>
+
+                    <p>Time tracking made simple. Use it to work effectively</p>
+                </div>
+            </div>
+
+            <div class="columns is-align-items mt-6">
+                <div class="column is-8 text">
+                    <h2 class="subtitle"><b>Collabrative working</b></h2>
+
+                    <p>Use our application to Collabratively work with your team-mates on various projects</p>
+                </div>
+
+                <div class="column is-4 image">
+                    <img src="{% static 'images/2.png' %}">
+                </div>
+            </div>
+
+            <div class="columns is-align-items mt-6">
+                <div class="column is-4 image">
+                    <img src="{% static 'images/5.png   ' %}">
+                </div>
+
+                <div class="column is-8 text">
+                    <h2 class="subtitle"><b>Productivity</b></h2>
+
+                    <p>Use your time very effectively and efficiently.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="columns is-align-items-center mt-6">
+        <div class="column is-4 is-offset-4 has-text-centered">
+            <h2 class="subtitle">Let's get started</h2>
+
+            <a href="{% url 'signup' %}" class="button is-success is-large">Get a free account</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
