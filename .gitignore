@@ -3,3 +3,4 @@ minvenv
 *.pyc
 */*.pyc
 */*/*.pyc
+venv/

@@ -7,11 +7,11 @@ from django.template.loader import render_to_string
 #
 
 def send_invitation(to_email, code, team):
-    from_email = 'ab7710850@gmail.com'
+    from_email = 'rsharvesh16@gmail.com'
     acceptation_url = settings.ACCEPTATION_URL
 
-    subject = 'Invitation to Minutos'
-    text_content = 'Invitation to Minutos. Your code is: %s' % code
+    subject = 'Invitation to ProTrack'
+    text_content = 'Invitation to ProTrack. Your code is: %s' % code
     html_content = render_to_string('team/email_invitation.html', {'code': code, 'team': team, 'acceptation_url': acceptation_url})
 
     msg = EmailMultiAlternatives(subject, text_content, from_email, [to_email])
@@ -19,7 +19,7 @@ def send_invitation(to_email, code, team):
     msg.send()
 
 def send_invitation_accepted(team, invitation):
-    from_email = 'ab7710850@gmail.com'
+    from_email = 'rsharvesh16@gmail.com'
     subject = 'Invitation accepted'
     text_content = 'Your invitation was accepted'
     html_content = render_to_string('team/email_accepted_invitation.html', {'team': team, 'invitation': invitation})
